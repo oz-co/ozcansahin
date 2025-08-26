@@ -5,66 +5,102 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Özcan Şahin | Portfolio</title>
   <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9; color:#333; }
-    header { background:#111; color:#fff; text-align:center; padding:80px 20px; }
-    header h1 { font-size:2.5em; margin:0; }
-    header p { font-size:1.2em; margin-top:10px; }
-    section { padding:60px 20px; max-width:900px; margin:auto; }
-    h2 { margin-bottom:20px; color:#111; }
-    .projects { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:20px; }
-    .card { background:#fff; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1); padding:20px; text-align:center; }
-    .card a { display:inline-block; margin-top:10px; text-decoration:none; color:#0073e6; }
-    footer { background:#111; color:#fff; text-align:center; padding:20px; }
-    footer a { color:#fff; margin:0 10px; text-decoration:none; }
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #f9fafc; color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, #111, #444);
+      color: #fff; text-align: center;
+      padding: 80px 20px;
+    }
+    header h1 { font-size: 2.5em; margin: 0; }
+    header p { font-size: 1.2em; opacity: 0.9; margin-top: 10px; }
+
+    section {
+      max-width: 1000px; margin: auto; padding: 60px 20px;
+    }
+    h2 {
+      text-align: center; margin-bottom: 40px;
+      color: #111;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+    .card:hover { transform: translateY(-5px); }
+    .card h3 { margin-top: 0; color: #0073e6; }
+    .card a { text-decoration: none; color: #0073e6; font-weight: bold; }
+
+    footer {
+      background: #111; color: #fff;
+      text-align: center; padding: 20px;
+      margin-top: 40px;
+    }
+    footer a { color: #fff; margin: 0 8px; text-decoration: none; }
   </style>
 </head>
 <body>
 
 <header>
   <h1>Özcan Şahin</h1>
-  <p>Video Editor · Social Media Expert · Storyteller</p>
+  <p>Video Editor · Social Media Expert · Creative Storyteller</p>
+  <p><em>Exploring Generative AI & Visual Storytelling</em></p>
 </header>
 
-<section id="about">
-  <h2>Hakkımda</h2>
-  <p>Gazetecilik geçmişimle hikâye anlatmayı öğrendim, reklamcılık ve dijital medya deneyimlerimle görsel dili güçlendirdim. Video prodüksiyon, sosyal medya içerikleri ve generative AI araçlarını birleştirerek yaratıcı çözümler üretiyorum. Bremen’de yaşıyorum, uzaktan çalışma fırsatlarına da açığım.</p>
+<section>
+  <h2>About Me</h2>
+  <p>
+    I am a video editor and social media expert with a background in journalism. 
+    Skilled in Adobe Premiere Pro, After Effects, Photoshop, and Illustrator. 
+    I have experience in videography, podcast production, and digital storytelling. 
+    Currently based in Bremen, Germany — open to creative collaborations and remote work. 
+    Passionate about combining classic storytelling with the possibilities of Generative AI.
+  </p>
 </section>
 
-<section id="projects">
-  <h2>Projeler</h2>
+<section>
+  <h2>Selected Works</h2>
   <div class="projects">
     <div class="card">
-      <h3>Behance Portfolio</h3>
-      <p>Video ve görsel işlerimden seçmeler.</p>
-      <a href="https://www.behance.net/ozcansahin" target="_blank">İncele</a>
+      <h3>🎬 Video Reel</h3>
+      <p>A showcase of short-form edits for social media campaigns.</p>
+      <a href="https://www.behance.net/ozcansahin" target="_blank">View</a>
     </div>
     <div class="card">
-      <h3>Google Ads Creatives</h3>
-      <p>Hazırladığım kreatif reklam örnekleri.</p>
-      <a href="https://shorturl.at/vpLdD" target="_blank">İzle</a>
+      <h3>📸 Photography & Design</h3>
+      <p>Visual compositions, event coverage, and creative stills.</p>
+      <a href="https://shorturl.at/QjwU7" target="_blank">View</a>
     </div>
     <div class="card">
-      <h3>Slides Showcase</h3>
-      <p>Video içerikleri ve sosyal medya örneklerim.</p>
-      <a href="https://shorturl.at/QjwU7" target="_blank">Görüntüle</a>
+      <h3>🤖 Generative AI Experiment</h3>
+      <p>Exploring storytelling through AI-assisted video and visuals.</p>
+      <a href="#" target="_blank">Coming Soon</a>
     </div>
   </div>
 </section>
 
-<section id="skills">
-  <h2>Yetenekler</h2>
-  <p>Adobe Premiere Pro · After Effects · Photoshop · Illustrator · Videografi · Podcast Prodüksiyonu · Sosyal Medya Yönetimi · Generative AI</p>
-</section>
-
-<section id="contact">
-  <h2>İletişim</h2>
-  <p>Bremen, Almanya</p>
-  <p>Email: <a href="mailto:ozcansahin@example.com">ozcansahin@example.com</a></p>
-  <p><a href="https://www.linkedin.com/in/ozcansahin/" target="_blank">LinkedIn</a> | <a href="https://www.behance.net/ozcansahin" target="_blank">Behance</a></p>
+<section>
+  <h2>Contact</h2>
+  <p style="text-align:center;">
+    📧 <a href="mailto:ozcansahin@example.com">ozcansahin@example.com</a> ·  
+    🔗 <a href="https://www.linkedin.com/in/ozcansahin/">LinkedIn</a> ·  
+    🎨 <a href="https://www.behance.net/ozcansahin">Behance</a>
+  </p>
 </section>
 
 <footer>
-  <p>© 2025 Özcan Şahin</p>
+  <p>© 2025 Özcan Şahin | Made with creativity & GitHub Pages</p>
 </footer>
 
 </body>
