@@ -148,6 +148,31 @@
       color: #e0e0e0;
     }
 
+    .project .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 8px 16px;
+      background-color: #ff4500;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 0.9em;
+      transition: background-color 0.3s ease;
+    }
+
+    .project .btn:hover {
+      background-color: #ff6347;
+    }
+
+    .project .coming-soon {
+      background-color: #555;
+      cursor: not-allowed;
+    }
+
+    .project .coming-soon:hover {
+      background-color: #777;
+    }
+
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -236,16 +261,19 @@
         <i class="fa-solid fa-clapperboard"></i>
         <h3>🎬 Video Showreel</h3>
         <p>Short-form social media videos and brand campaigns.</p>
+        <a href="#" class="btn">view</a>
       </div>
       <div class="project" data-aos="zoom-in" data-aos-delay="200">
         <i class="fa-solid fa-camera-retro"></i>
         <h3>📸 Creative Photography</h3>
         <p>Portfolio of slides, photo essays, and creative shots.</p>
+        <a href="#" class="btn">view</a>
       </div>
       <div class="project" data-aos="zoom-in" data-aos-delay="300">
         <i class="fa-solid fa-robot"></i>
         <h3>🤖 Generative AI Experiments</h3>
         <p>AI-powered video, visual, and experimental storytelling projects.</p>
+        <span class="btn coming-soon">coming soon</span>
       </div>
     </div>
   </section>
