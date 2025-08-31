@@ -64,3 +64,90 @@
     }
     .skill i {
       font-size: 2em;
+      color: #0ff;
+      margin-bottom: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: rgba(0,0,0,0.4);
+      margin-top: 50px;
+    }
+    footer a {
+      margin: 0 15px;
+      color: #0ff;
+      font-size: 1.5em;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    footer a:hover {
+      color: #fff;
+      text-shadow: 0 0 10px #0ff;
+    }
+    #particles-js {
+      position: fixed;
+      top:0; left:0;
+      width: 100%; height: 100%;
+      z-index: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <header>
+    <h1>Özcan Şahin</h1>
+    <p>🎥 Video · 📱 Content · 📰 Storyteller · 🤖 Generative AI</p>
+  </header>
+
+  <section data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>Video editor and social media specialist with a journalism background, passionate about generative AI. Skilled in Photoshop, Premiere Pro, After Effects, and Illustrator. Experienced in camera work, audio production, podcasts, and social media management. Creative, solution-oriented, and currently based in Bremen, Germany — open to remote opportunities.</p>
+  </section>
+
+  <section data-aos="zoom-in">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill"><i class="fa-solid fa-scissors"></i><p>Video Editing</p></div>
+      <div class="skill"><i class="fa-solid fa-photo-film"></i><p>Premiere Pro</p></div>
+      <div class="skill"><i class="fa-solid fa-film"></i><p>After Effects</p></div>
+      <div class="skill"><i class="fa-solid fa-image"></i><p>Photoshop</p></div>
+      <div class="skill"><i class="fa-solid fa-pen-nib"></i><p>Illustrator</p></div>
+      <div class="skill"><i class="fa-solid fa-video"></i><p>Videography</p></div>
+      <div class="skill"><i class="fa-solid fa-microphone"></i><p>Podcast Production</p></div>
+      <div class="skill"><i class="fa-brands fa-instagram"></i><p>Social Media</p></div>
+      <div class="skill"><i class="fa-solid fa-robot"></i><p>Generative AI</p></div>
+    </div>
+  </section>
+
+  <section data-aos="fade-up">
+    <h2>Showcase</h2>
+    <p>🎬 Video Showreel – Short-form social media videos and brand campaigns.</p>
+    <p>📸 Creative Photography – My Portfolio Slide.</p>
+    <p>🤖 Generative AI Experiments – AI-powered video, visual and experimental story projects.</p>
+  </section>
+
+  <footer>
+    <a href="mailto:ozcan@example.com"><i class="fa-solid fa-envelope"></i></a>
+    <a href="https://www.behance.net/ozcansahin" target="_blank"><i class="fa-brands fa-behance"></i></a>
+    <a href="https://github.com/oz-co" target="_blank"><i class="fa-brands fa-github"></i></a>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {"value": 80},
+        "color": {"value": "#0ff"},
+        "shape": {"type": "circle"},
+        "opacity": {"value": 0.5},
+        "size": {"value": 3},
+        "line_linked": {"enable": true, "color":"#0ff"},
+        "move": {"enable": true, "speed": 2}
+      }
+    });
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>
