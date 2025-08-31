@@ -3,151 +3,342 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Özcan Şahin – Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+  <title>Özcan Şahin – Cosmic Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: 'Poppins', sans-serif;
-      background: radial-gradient(circle at top left, #0f0c29, #302b63, #24243e);
+      background: #0a0a0a;
       color: #fff;
+      line-height: 1.6;
       overflow-x: hidden;
     }
+
     header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      padding: 100px 20px 50px;
+      background: linear-gradient(135deg, #1e1e1e, #2c003e, #ff004d);
       position: relative;
-      z-index: 2;
+      overflow: hidden;
+      padding: 0 20px;
     }
-    header h1 {
-      font-size: 3em;
-      font-weight: 800;
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(255, 77, 77, 0.2), transparent);
+      z-index: 1;
+      animation: pulse 8s infinite;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 0.3; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(1.2); }
+      100% { opacity: 0.3; transform: scale(1); }
+    }
+
+    header .name {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(2rem, 5vw, 4.5em);
       color: #fff;
-      text-shadow: 0 0 10px #00f, 0 0 20px #0ff, 0 0 40px #0ff;
-      margin-bottom: 10px;
+      text-shadow: 0 0 20px rgba(255, 77, 77, 0.9), 0 0 40px rgba(255, 77, 77, 0.7);
+      margin-bottom: 1.5rem;
+      z-index: 2;
+      animation: fadeInDown 1s ease-in-out;
     }
+
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-50px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(1.5rem, 4vw, 4em);
+      color: #000;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+      z-index: 2;
+      margin: 1rem 0;
+    }
+
     header p {
-      font-size: 1.2em;
-      color: #ccc;
-    }
-    section {
-      padding: 80px 20px;
-      text-align: center;
-      position: relative;
+      font-size: clamp(0.9rem, 2vw, 1.3em);
+      max-width: 90%;
+      color: #e0e0e0;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 1.5rem;
+      border-radius: 10px;
       z-index: 2;
     }
-    h2 {
-      font-size: 2em;
-      margin-bottom: 30px;
-      color: #0ff;
-      text-shadow: 0 0 10px #0ff, 0 0 20px #00f;
-    }
-    .skills {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 20px;
-      max-width: 900px;
+
+    section {
+      padding: clamp(50px, 8vw, 100px) 20px;
+      max-width: 1200px;
       margin: auto;
     }
-    .skill {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 15px;
-      padding: 20px;
-      transition: transform 0.3s, box-shadow 0.3s;
+
+    h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(1.5rem, 4vw, 2.5em);
+      text-align: center;
+      color: #ff004d;
+      text-transform: uppercase;
+      margin-bottom: clamp(20px, 5vw, 50px);
+      text-shadow: 0 0 10px rgba(255, 77, 77, 0.5);
     }
+
+    .projects, .skills-grid {
+      display: grid;
+      gap: clamp(15px, 3vw, 30px);
+    }
+
+    .projects {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    @media (max-width: 768px) {
+      .projects {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .project {
+      background: linear-gradient(145deg, #1a1a1a, #2c003e);
+      padding: clamp(1rem, 3vw, 30px);
+      border-radius: 15px;
+      text-align: center;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .project:hover {
+      transform: translateY(-10px) rotateX(10deg);
+      box-shadow: 0 15px 30px rgba(255, 77, 77, 0.6);
+      background: linear-gradient(145deg, #2c003e, #ff004d);
+    }
+
+    .project i {
+      font-size: clamp(2rem, 5vw, 3em);
+      color: #ff004d;
+      margin-bottom: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    .project:hover i {
+      transform: scale(1.2);
+    }
+
+    .project h3 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(1.1rem, 3vw, 1.5em);
+      color: #fff;
+    }
+
+    .project p {
+      font-size: clamp(0.8rem, 2vw, 1em);
+      color: #e0e0e0;
+    }
+
+    .project .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: clamp(0.5rem, 1.5vw, 8px) clamp(1rem, 2vw, 16px);
+      background-color: #ff4500;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: clamp(0.7rem, 1.5vw, 0.9em);
+      transition: background-color 0.3s ease;
+    }
+
+    .project .btn:hover {
+      background-color: #ff6347;
+    }
+
+    .project .coming-soon {
+      background-color: #555;
+      cursor: not-allowed;
+    }
+
+    .project .coming-soon:hover {
+      background-color: #777;
+    }
+
+    .skills-grid {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    @media (max-width: 768px) {
+      .skills-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .skill {
+      background: linear-gradient(145deg, #1a1a1a, #2c003e);
+      padding: clamp(1rem, 2vw, 30px);
+      border-radius: 15px;
+      text-align: center;
+      transition: all 0.4s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+
     .skill:hover {
       transform: translateY(-10px);
-      box-shadow: 0 0 20px #0ff, 0 0 40px #00f;
+      box-shadow: 0 15px 30px rgba(255, 77, 77, 0.6);
+      background: linear-gradient(145deg, #2c003e, #ff004d);
     }
+
     .skill i {
-      font-size: 2em;
-      color: #0ff;
-      margin-bottom: 10px;
+      font-size: clamp(1.5rem, 4vw, 2.5em);
+      color: #ff004d;
+      margin-bottom: 0.5rem;
     }
+
+    .skill p {
+      font-size: clamp(0.9rem, 2vw, 1.1em);
+      font-weight: 500;
+      color: #fff;
+    }
+
     footer {
       text-align: center;
-      padding: 40px 20px;
-      background: rgba(0,0,0,0.4);
-      margin-top: 50px;
+      padding: clamp(1rem, 2vw, 30px);
+      background: #1a1a1a;
+      color: #888;
+      font-family: 'Poppins', sans-serif;
     }
+
     footer a {
-      margin: 0 15px;
-      color: #0ff;
-      font-size: 1.5em;
+      color: #ff004d;
       text-decoration: none;
-      transition: color 0.3s;
+      margin: 0 clamp(5px, 1vw, 10px);
+      transition: color 0.3s ease;
     }
+
     footer a:hover {
       color: #fff;
-      text-shadow: 0 0 10px #0ff;
+      text-shadow: 0 0 10px #ff004d;
     }
+
+    footer i {
+      font-size: clamp(1rem, 2vw, 1.5em);
+      margin: 0 clamp(5px, 1vw, 10px);
+    }
+
     #particles-js {
-      position: fixed;
-      top:0; left:0;
-      width: 100%; height: 100%;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
       z-index: 0;
     }
   </style>
 </head>
 <body>
-  <div id="particles-js"></div>
-
   <header>
-    <h1>Özcan Şahin</h1>
-    <p>🎥 Video · 📱 Content · 📰 Storyteller · 🤖 Generative AI</p>
+    <div id="particles-js"></div>
+    <div class="name" data-aos="fade-down">Özcan Şahin</div>
+    <h1 data-aos="fade-down" data-aos-delay="100">🎥 Video · 📱 Content · 📰 Storyteller · 🤖 Generative AI</h1>
+    <p data-aos="fade-up" data-aos-delay="300">
+      Video editor and social media specialist with a journalism background, passionate about generative AI. 
+      Skilled in Photoshop, Premiere Pro, After Effects, and Illustrator. Experienced in camera work, audio production, podcasts, and social media management. 
+      Creative, solution-oriented, and currently based in Bremen, Germany — open to remote opportunities.
+    </p>
   </header>
 
-  <section data-aos="fade-up">
+  <section id="about" data-aos="fade-up">
     <h2>About Me</h2>
     <p>Video editor and social media specialist with a journalism background, passionate about generative AI. Skilled in Photoshop, Premiere Pro, After Effects, and Illustrator. Experienced in camera work, audio production, podcasts, and social media management. Creative, solution-oriented, and currently based in Bremen, Germany — open to remote opportunities.</p>
   </section>
 
-  <section data-aos="zoom-in">
+  <section id="skills" data-aos="zoom-in">
     <h2>Skills</h2>
-    <div class="skills">
-      <div class="skill"><i class="fa-solid fa-scissors"></i><p>Video Editing</p></div>
-      <div class="skill"><i class="fa-solid fa-photo-film"></i><p>Premiere Pro</p></div>
-      <div class="skill"><i class="fa-solid fa-film"></i><p>After Effects</p></div>
-      <div class="skill"><i class="fa-solid fa-image"></i><p>Photoshop</p></div>
-      <div class="skill"><i class="fa-solid fa-pen-nib"></i><p>Illustrator</p></div>
-      <div class="skill"><i class="fa-solid fa-video"></i><p>Videography</p></div>
-      <div class="skill"><i class="fa-solid fa-microphone"></i><p>Podcast Production</p></div>
-      <div class="skill"><i class="fa-brands fa-instagram"></i><p>Social Media</p></div>
-      <div class="skill"><i class="fa-solid fa-robot"></i><p>Generative AI</p></div>
+    <div class="skills-grid">
+      <div class="skill" data-aos="flip-up" data-aos-delay="100"><i class="fa-solid fa-scissors"></i><p>Video Editing</p></div>
+      <div class="skill" data-aos="flip-up" data-aos-delay="200"><i class="fa-solid fa-photo-film"></i><p>Premiere Pro</p></div>
+      <div class="skill" data-aos="flip-up" data-aos-delay="300"><i class="fa-solid fa-film"></i><p>After Effects</p></div>
+      <div class="skill" data-aos="flip-up" data-aos-delay="400"><i class="fa-solid fa-image"></i><p>Photoshop</p></div>
+      <div class="skill" data-aos="flip-up" data-aos-delay="500"><i class="fa-solid fa-pen-nib"></i><p>Illustrator</p></div>
+      <div class="skill" data-aos="flip-up" data-aos-delay="600"><i class="fa-solid fa-video"></i><p>Videography</p></div>
+      <div class="skill" data-aos="flip-up" data-aos-delay="700"><i class="fa-solid fa-microphone"></i><p>Podcast Production</p></div>
+      <div class="skill" data-aos="flip-up" data-aos-delay="800"><i class="fa-brands fa-instagram"></i><p>Social Media</p></div>
+      <div class="skill" data-aos="flip-up" data-aos-delay="900"><i class="fa-solid fa-robot"></i><p>Generative AI</p></div>
     </div>
   </section>
 
-  <section data-aos="fade-up">
+  <section id="projects" data-aos="fade-up">
     <h2>Showcase</h2>
-    <p>🎬 Video Showreel – Short-form social media videos and brand campaigns.</p>
-    <p>📸 Creative Photography – My Portfolio Slide.</p>
-    <p>🤖 Generative AI Experiments – AI-powered video, visual and experimental story projects.</p>
+    <div class="projects">
+      <div class="project" data-aos="zoom-in" data-aos-delay="100">
+        <i class="fa-solid fa-clapperboard"></i>
+        <h3>🎬 Video Showreel</h3>
+        <p>Short-form social media videos and brand campaigns.</p>
+        <a href="https://oz-co.github.io/ozcansahin/" class="btn">view</a>
+      </div>
+      <div class="project" data-aos="zoom-in" data-aos-delay="200">
+        <i class="fa-solid fa-camera-retro"></i>
+        <h3>📸 Creative Photography</h3>
+        <p>My Portfolio Slide.</p>
+        <a href="https://oz-co.github.io/ozcansahin/" class="btn">view</a>
+      </div>
+      <div class="project" data-aos="zoom-in" data-aos-delay="300">
+        <i class="fa-solid fa-robot"></i>
+        <h3>🤖 Generative AI Experiments</h3>
+        <p>AI-powered video, visual and experimental story projects.</p>
+        <span class="btn coming-soon">coming soon</span>
+      </div>
+    </div>
   </section>
 
   <footer>
-    <a href="mailto:ozcan@example.com"><i class="fa-solid fa-envelope"></i></a>
-    <a href="https://www.behance.net/ozcansahin" target="_blank"><i class="fa-brands fa-behance"></i></a>
-    <a href="https://github.com/oz-co" target="_blank"><i class="fa-brands fa-github"></i></a>
+    <p>© 2025 Özcan Şahin · 
+      <a href="mailto:ozcan@example.com"><i class="fa-solid fa-envelope"></i></a> | 
+      <a href="https://www.behance.net/ozcansahin" target="_blank"><i class="fa-brands fa-behance"></i></a> | 
+      <a href="https://github.com/oz-co" target="_blank"><i class="fa-brands fa-github"></i></a>
+    </p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    particlesJS("particles-js", {
-      "particles": {
-        "number": {"value": 80},
-        "color": {"value": "#0ff"},
-        "shape": {"type": "circle"},
-        "opacity": {"value": 0.5},
-        "size": {"value": 3},
-        "line_linked": {"enable": true, "color":"#0ff"},
-        "move": {"enable": true, "speed": 2}
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 80, density: { enable: true, value_area: 800 } },
+        color: { value: '#ff004d' },
+        shape: { type: 'circle' },
+        opacity: { value: 0.5, random: true },
+        size: { value: 3, random: true },
+        line_linked: { enable: true, distance: 150, color: '#ff004d', opacity: 0.4, width: 1 },
+        move: { enable: true, speed: 2, direction: 'none', random: true }
+      },
+      interactivity: {
+        detect_on: 'canvas',
+        events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' } },
+        modes: { repulse: { distance: 100 }, push: { particles_nb: 4 } }
       }
     });
+
+    AOS.init({ duration: 1000, once: true });
   </script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
 </body>
 </html>
