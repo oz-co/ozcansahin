@@ -3,167 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Özcan Şahin - Portfolio</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <title>Özcan Şahin – Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
   <style>
     body {
       margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background: #0d0d0d;
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top left, #0f0c29, #302b63, #24243e);
       color: #fff;
       overflow-x: hidden;
     }
     header {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      background: #0d0d0d;
-      position: relative;
-      z-index: 1;
       text-align: center;
+      padding: 100px 20px 50px;
+      position: relative;
+      z-index: 2;
     }
     header h1 {
-      font-size: 3rem;
-      margin: 0;
-      color: #ff004f;
+      font-size: 3em;
+      font-weight: 800;
+      color: #fff;
+      text-shadow: 0 0 10px #00f, 0 0 20px #0ff, 0 0 40px #0ff;
+      margin-bottom: 10px;
     }
     header p {
-      font-size: 1.2rem;
-      margin-top: 10px;
+      font-size: 1.2em;
       color: #ccc;
     }
     section {
       padding: 80px 20px;
       text-align: center;
+      position: relative;
+      z-index: 2;
     }
     h2 {
-      color: #ff004f;
-      margin-bottom: 40px;
-      font-size: 2rem;
-    }
-    .work-item {
-      margin: 20px auto;
-      max-width: 600px;
-      padding: 20px;
-      background: #1a1a1a;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
-      transition: transform 0.3s;
-    }
-    .work-item:hover {
-      transform: translateY(-5px);
+      font-size: 2em;
+      margin-bottom: 30px;
+      color: #0ff;
+      text-shadow: 0 0 10px #0ff, 0 0 20px #00f;
     }
     .skills {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 20px;
-      max-width: 800px;
-      margin: 0 auto;
+      max-width: 900px;
+      margin: auto;
     }
     .skill {
-      background: #1a1a1a;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 15px;
       padding: 20px;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-      transition: transform 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
     .skill:hover {
-      transform: scale(1.05);
+      transform: translateY(-10px);
+      box-shadow: 0 0 20px #0ff, 0 0 40px #00f;
     }
     .skill i {
-      font-size: 2rem;
-      margin-bottom: 10px;
-      color: #ff004f;
-    }
-    footer {
-      text-align: center;
-      padding: 40px;
-      background: #111;
-      color: #aaa;
-      margin-top: 50px;
-    }
-    footer a {
-      margin: 0 10px;
-      color: #ff004f;
-      text-decoration: none;
-    }
-    .cta-button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background: #ff004f;
-      color: #fff;
-      font-weight: bold;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-    .cta-button:hover {
-      background: #e60047;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>🎥 Video · 📱 Content · 📰 Storyteller · 🤖 Generative AI</h1>
-    <p>Creative Video Editor & Social Media Specialist based in Bremen</p>
-    <a href="#work" class="cta-button">See My Work</a>
-  </header>
-
-  <section id="about" data-aos="fade-up">
-    <h2>About Me</h2>
-    <p>Video editor and social media specialist with a journalism background, passionate about generative AI. Skilled in Photoshop, Premiere Pro, After Effects, and Illustrator. Experienced in camera work, audio production, podcasts, and social media management. Creative, solution-oriented, and open to remote opportunities.</p>
-  </section>
-
-  <section id="work" data-aos="fade-up">
-    <h2>Featured Work</h2>
-    <div class="work-item">
-      <h3>🎬 Video Showreel</h3>
-      <p>Short-form social media videos and brand campaigns.</p>
-      <a href="https://www.behance.net/ozcansahin" target="_blank">View on Behance</a>
-    </div>
-    <div class="work-item">
-      <h3>📸 Creative Photography</h3>
-      <p>My Portfolio Slide</p>
-      <a href="https://www.behance.net/ozcansahin" target="_blank">See Portfolio</a>
-    </div>
-    <div class="work-item">
-      <h3>🤖 Generative AI Experiments</h3>
-      <p>AI-powered video, visual and experimental story projects.</p>
-      <a href="https://www.behance.net/ozcansahin" target="_blank">Explore</a>
-    </div>
-  </section>
-
-  <section id="skills" data-aos="fade-up">
-    <h2>Skills</h2>
-    <div class="skills">
-      <div class="skill"><i class="fas fa-video"></i><p>Video Editing</p></div>
-      <div class="skill"><i class="fas fa-film"></i><p>Premiere Pro</p></div>
-      <div class="skill"><i class="fas fa-magic"></i><p>After Effects</p></div>
-      <div class="skill"><i class="fas fa-image"></i><p>Photoshop</p></div>
-      <div class="skill"><i class="fas fa-paint-brush"></i><p>Illustrator</p></div>
-      <div class="skill"><i class="fas fa-camera"></i><p>Videography</p></div>
-      <div class="skill"><i class="fas fa-microphone"></i><p>Podcast</p></div>
-      <div class="skill"><i class="fas fa-mobile"></i><p>Social Media</p></div>
-      <div class="skill"><i class="fas fa-robot"></i><p>Generative AI</p></div>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 Özcan Şahin</p>
-    <a href="https://www.behance.net/ozcansahin" target="_blank"><i class="fab fa-behance"></i></a>
-    <a href="https://github.com/oz-co" target="_blank"><i class="fab fa-github"></i></a>
-    <a href="mailto:ozcanosahin@gmail.com"><i class="fas fa-envelope"></i></a>
-  </footer>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1000 });
-  </script>
-</body>
-</html>
+      font-size: 2em;
